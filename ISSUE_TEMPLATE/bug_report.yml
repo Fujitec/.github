@@ -1,0 +1,57 @@
+name: バグ報告
+description: 想定と異なる挙動を報告する
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        報告ありがとうございます。既存の Issue に同じ内容がないか、先にご確認ください。
+  - type: textarea
+    id: description
+    attributes:
+      label: 現象
+      description: 何が起きているかを具体的に
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する挙動
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: バージョン
+      placeholder: "例: v1.2.3 / main の abc1234"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境
+      placeholder: "OS / ランタイム / ブラウザ など"
+  - type: textarea
+    id: logs
+    attributes:
+      label: ログ・スクリーンショット
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 確認事項
+      options:
+        - label: 既存の Issue を検索した
+          required: true
+        - label: 最新版で再現することを確認した

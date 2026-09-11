@@ -1,0 +1,35 @@
+name: 機能要望
+description: 新機能や改善を提案する
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 解決したい課題
+      description: 現状どのような困りごとがあるか
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案する解決策
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 検討した代替案
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 優先度（自己申告）
+      options:
+        - 低
+        - 中
+        - 高
+  - type: textarea
+    id: context
+    attributes:
+      label: 補足
+      description: 参考リンク、スクリーンショットなど
